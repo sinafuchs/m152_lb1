@@ -1,0 +1,116 @@
+#bgContainer {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  #background {
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(
+      circle,
+      rgba(180, 55, 238, 0.747) 1%,
+      rgba(203, 28, 238, 0.699)  13%,
+      rgba(145, 45, 228, 0.596) 26%,
+      rgba(255, 0, 212, 0.562) 39%,
+      rgba(255, 55, 212, 0.5) 52%,
+      rgba(220, 78, 239, 0.671) 65%,
+      rgba(220, 78, 239, 0.671) 77%,
+      rgb(215, 123, 252)  89%,
+      rgba(239, 159, 250, 0.856) 98%
+    );
+    z-index: -1;
+    animation: 1s backgroundWarp infinite;
+  }
+  
+  @keyframes backgroundWarp {
+    50% {
+      transform: scale(5);
+    }
+  }
+  
+  #narwhal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50vh;
+    width: 50vw;
+  }
+  
+  #wavyFin {
+    animation: 2s wavyFin infinite ease-in-out;
+    transform-origin: 50px 100px;
+  }
+  
+  #leftFin {
+    animation: 1s leftFin infinite ease-in-out;
+    transform-origin: 160px 120px;
+  }
+  
+  #rightFin {
+    animation: 1s rightFin infinite ease-in-out;
+    transform-origin: 180px 120px;
+  }
+  
+  @keyframes wavyFin {
+    0%,
+    100% {
+      transform: rotate(0deg) translate(50px);
+    }
+    50% {
+      transform: rotate(60deg) translate(70px);
+    }
+  }
+  @keyframes leftFin {
+    0%,
+    100% {
+      transform: rotate(-10deg) translatey(10px);
+    }
+    50% {
+      transform: rotate(10deg) translatey(10px);
+    }
+  }
+  @keyframes rightFin {
+    0%,
+    100% {
+      transform: rotate(0deg) translatey(10px);
+    }
+    50% {
+      transform: rotate(-20deg) translatey(10px);
+    }
+  }
+  
+  #star1 {
+    animation: 1500ms rotateStar infinite linear;
+    transform-origin: 33px 42px;
+  }
+  
+  #star2 {
+    opacity: 0;
+    animation: 1500ms rotateStar infinite alternate;
+    animation-delay: 1s;
+    transform-origin: 35px 20px;
+  }
+  
+  @keyframes rotateStar {
+    0% {
+      opacity: 0;
+      transform: rotate(0deg) scale(0);
+    }
+    40%,
+    60% {
+      opacity: 1;
+    }
+    50% {
+      transform: rotate(360deg) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: rotate(720deg) scale(0);
+    }
+  }
+  
+  

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css.css">
+    <script src="javascript.js" defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animations</title>
+  </head>
+  <body>
+      <h1>Trying out animation with CSS</h1>
+      <h2> CSS: Button with Animation, click to get back to main page</h2>
+      <button class="button button1 flip" onclick="location.href='index.html'">Back to main Page</button>
+      <h1>Trying out animation with SVG</h1>
+      <h2>Block gets smaler and color gets darker until its black</h2>
+      <h2>other block rotates randomly</h2>
+      <svg width="500px" height="500px" viewBox="0 0 500 500">
+        <rect x="0" y="0" width="100" height="100" fill="#30af82">
+            <animate attributeName="x" from="0" to="500" dur="2s" repeatCount="indefinite" />
+            <animate attributeName="width" from="500" to="0" dur="2s" repeatCount="indefinite" />
+            <animate attributeName="fill" to="black" dur="2s" repeatCount="indefinite" />
+        </rect>
+      </svg>
+      <svg width="500px" height="500px" viewBox="0 0 500 500">
+        <rect x="250" y="250" width="50" height="50" fill="#4bc0c8">
+            <animateTransform attributeName="transform" type="rotate" begin="0s" dur="10s" from="0 200 200" to="360 400 400" repeatCount="indefinite" />
+        </rect>
+      </svg>
+      <h1> Trying out Canvas animation</h1>
+      <h2>Square moves from one side to other and goes a step down every time it turns</h2>
+      <h2>The clock shows the exact time</h2>
+      <h2>The panorama automatically moves</h2>
+      <h2>loading circle with a pizza</h2>
+      <main>
+        <canvas id="block" width="500" height="300">Example for Anmiation with Canvas</canvas>
+        <canvas id="clock" width="500" height="300">Example for Anmiation with Canvas</canvas>
+        <canvas id="panorama" width="500" height="300">Example for Anmiation with Canvas</canvas>
+      </main>  
+      <main><canvas id="pizza"> Example for Animation with Canvas</canvas></main>
+  </body>
+</html
