@@ -3,3 +3,25 @@
     border-radius: 15px;
     cursor: crosshair;
   }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(182, 153, 153);
+    font-family: 'Lato', sans-serif;
+  }
+  
+  .box {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    transition: all 1s;
+    margin-left: 160px;
+    display: inline-block;
+  }
+  
+  .box:hover {
+    width: 300px;
+    background-color: orange;
+  }
