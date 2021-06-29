@@ -26,7 +26,7 @@
     cursor: -webkit-grabbing;
     cursor: grabbing;
   }
-  .menu--wrapper {
+  .wrapper {
     counter-reset: count;
     display: flex;
     position: absolute;
@@ -36,7 +36,7 @@
     left: 0;
     width: 100%;
   }
-  .menu--item {
+  .menuItem {
     counter-increment: count;
     position: absolute;
     z-index: 1;
@@ -48,15 +48,15 @@
     overflow: hidden;
   }
   @media (max-width: 767px) {
-    .menu--item {
+    .menuItem {
       width: 40vw;
       height: 40vw;
     }
   }
-  .menu--item:nth-child(n+10):before {
+  .menuItem:nth-child(n+10):before {
     content: counter(count);
   }
-  .menu--item figure {
+  .menuItem figure {
     position: absolute;
     z-index: 1;
     display: block;
@@ -76,7 +76,7 @@
     pointer-events: none;
     transform-origin: center;
   }
-  .menu--item figure img {
+  .menuItem figure img {
     position: absolute;
     z-index: 1;
     top: 0;
@@ -88,7 +88,7 @@
     vertical-align: middle;
     transform-origin: center;
   }
-  .menu--item figure:before {
+  .menuItem figure:before {
     position: absolute;
     z-index: 2;
     bottom: 1vw;
