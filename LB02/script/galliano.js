@@ -1,4 +1,3 @@
-//TODO
 let colors = document.querySelectorAll(".slideShow .color");
 let titleLinks = document.querySelectorAll(".slideShow .nav-link");
 let images = document.querySelectorAll(".slideShow .images img");
@@ -11,7 +10,7 @@ images[0].classList.add("active");
 
 titleLinks.forEach((titleLink, index) => {
     //set zIndex so the image appears in the foreground
-    colors[index].style.zIndex = `${titleLinks.length -
+    colors[index].style.zIndex = `${maxZIndex -
         index}`;
     titleLink.addEventListener("click", () => {
         // nav-link
