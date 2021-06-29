@@ -7,21 +7,21 @@ body {
   background: #000000;
 }
 
-.carousel {
+.slideShow {
   position: relative;
   display: flex;
 }
 
-.carousel .slides img.active {
+.slideShow .images img.active {
   opacity: 1;
 }
-.carousel .overlays {
+.slideShow .colors {
   position: relative;
   width: 36em;
   height: 18em;
 }
-.carousel .overlays .bar {
-  background: var(--bar-color);
+.slideShow .colors .color {
+  background: var(--color);
   transform-origin: left;
   position: absolute;
   top: 0;
@@ -29,19 +29,19 @@ body {
   width: 100%;
   height: 100%;
 }
-.carousel .slides {
+.slideShow .images {
   position: relative;
   top: -4em;
   left: 10em;
 }
-.carousel .slides img {
+.slideShow .images img {
   position: absolute;
   width: 450px;
   height: 600px;
   opacity: 0;
   z-index: 9999;
 }
-.carousel .nav-links {
+.slideShow .titles {
   align-items: flex-start;
   margin: 0;
   padding: 0 0 0 6em;
@@ -50,7 +50,7 @@ body {
   justify-content: center;
   list-style-type: none;
 }
-.carousel .nav-links .nav-link {
+.slideShow .titles .nav-link {
   font-size: 2rem;
   font-family: Lora, serif;
   line-height: 2;
@@ -58,10 +58,10 @@ body {
   color: #7f8c8d;
   transition: 0.3s;
 }
-.carousel .nav-links .nav-link:hover {
+.slideShow .titles .nav-link:hover {
   color: #ffffff;
 }
-.carousel .nav-links .nav-link.active {
+.slideShow .titles .nav-link.active {
   color: rgb(255, 255, 255);
   pointer-events: none;
 }

@@ -1,7 +1,7 @@
 //TODO
-let colors = document.querySelectorAll(".carousel .bar");
-let titleLinks = document.querySelectorAll(".carousel .nav-link");
-let images = document.querySelectorAll(".carousel .slides img");
+let colors = document.querySelectorAll(".slideShow .color");
+let titleLinks = document.querySelectorAll(".slideShow .nav-link");
+let images = document.querySelectorAll(".slideShow .images img");
 // set bezier for speed of colors 
 let easeInOutQuart = "cubic-bezier(0.77, 0, 0.175, 1)";
 let maxZIndex = titleLinks.length;
@@ -18,7 +18,7 @@ titleLinks.forEach((titleLink, index) => {
         titleLinks.forEach(navLink => navLink.classList.remove("active"));
         titleLink.classList.add("active");
         // select current active image
-        let currSlide = document.querySelector(".carousel .slides img.active");
+        let currSlide = document.querySelector(".slideShow .images img.active");
         let imageFade = currSlide.animate([
             //repositions image horizontally
             { transform: "translateX(0)", opacity: 1 },
