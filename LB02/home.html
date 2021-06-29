@@ -7,12 +7,16 @@
     <title>Fashion Archive</title>
   </head>
   <div id="fullpage" class="full-page">
-	<p id="westwood" onmouseover="generateImage('./image/westwood.jpg' , 'westwoodimg' , this)"onmouseleave="changeBackgroundBack(this)" class="head-text title-text" style="top: 25%">Vivienne Westwood</p><br>
-	<br><p id="mugler" onmouseover="generateImage('./image/mugler.jpg' , 'muglerimg' , this)" onmouseleave="changeBackgroundBack(this)" class="head-text title-text" style="top: 35%">Thierry Mugler</p>
-	<br><p id="mcqueen" onmouseover="generateImage('./image/mcqueen.jpg' , 'mcqueenimg' , this)"onmouseleave="changeBackgroundBack(this)" class="head-text title-text" style="top: 45%">Alexander McQueen</p><br>
-	<br><p id="gaultier" onmouseover="generateImage('./image/gaultier.jpg' , 'gaultierimg' , this)" onmouseleave="changeBackgroundBack(this)" class="head-text title-text" style="top: 55%">Jean Paul Gaultier</p><br>
-	<br><p id="theyskens" onmouseover="generateImage('./image/theyskens.jpg' , 'theyskensimg' , this)" onmouseleave="changeBackgroundBack(this)" class="head-text title-text" style="top: 65%">Oliver Theyskens</p><br>
-	<br><p id="galliano" onmouseover="generateImage('./image/galliano.jpg' , 'gallianoimg' , this)" onmouseleave="changeBackgroundBack(this)" class="head-text title-text" style="top: 75%">John Galliano</p><br>
+	<p id="westwood" onclick="getNewPage(this)" onmouseover="generateImage(this)" onmouseleave="changeBackgroundBack(this)" class="title-text" style="top: 25%">Vivienne Westwood</p><br>
+	<p id="mugler" onclick="getNewPage(this)" onmouseover="generateImage(this)" onmouseleave="changeBackgroundBack(this)" class="title-text" style="top: 35%">Thierry Mugler</p>
+	<p id="mcqueen" onclick="getNewPage(this)" onmouseover="generateImage(this)"onmouseleave="changeBackgroundBack(this)" class="title-text" style="top: 45%">Alexander McQueen</p><br>
+	<p id="gaultier" onclick="getNewPage(this)" onmouseover="generateImage(this)" onmouseleave="changeBackgroundBack(this)" class="title-text" style="top: 55%">Jean Paul Gaultier</p><br>
+	<p id="theyskens" onclick="getNewPage(this)" onmouseover="generateImage(this)" onmouseleave="changeBackgroundBack(this)" class="title-text" style="top: 65%">Oliver Theyskens</p><br>
+	<p id="galliano" onclick="getNewPage(this)" onmouseover="generateImage(this)" onmouseleave="changeBackgroundBack(this)" class="title-text" style="top: 75%">John Galliano</p><br>
   </div>
+
+  <footer>
+    <a href="impressum.html">impressum</a>
+  </footer>
 </body>
 </html>

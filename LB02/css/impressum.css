@@ -1,0 +1,26 @@
+body{
+    background-color: #000000;
+  }
+
+  .white{
+    color: #ffffff;
+    text-align: center;
+    padding-left: 10em;
+    padding-right: 10em;
+    padding-top: 5em;
+  }
+  footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100px;
+    text-align: left;
+    background:black;
+  }
+  footer a {
+    border-bottom: 1px solid black;
+    color: rgb(216, 212, 212);
+    font: 24px/180px serif;
+    text-decoration: none;
+  }

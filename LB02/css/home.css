@@ -2,22 +2,14 @@
   --txt-color: #fff;
   --txt-box-bg: #424242;
   --main-bg: #000;
-  --main-front-color: #ffffff;
-  --second-front-color: #c2c2c2;
-  --third-front-color: #858585;
+  --main-front-color: #ffb9ee;
+  --second-front-color: #ff88ef;
+  --third-front-color: #ff71d5;
 }
 
 * {
   margin: 0px;
   padding: 0px;
-}
-
-.head-text {
-  font-family: "IBM Plex Sans", sans-serif;
-  color: var(--txt-color);
-  left: 50%;
-  width: 1000px;
-  transform: translate(-50%, -50%);
 }
 
 .full-page {
@@ -26,7 +18,39 @@
   height: 100vh;
 }
 
+.whenpicture{
+  font-family: "IBM Plex Sans", sans-serif;
+  color: var(--txt-color);
+  left: 50%;
+  width: 1000px;
+  opacity: 0.4;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  /*Color the text with background*/
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #c4c0c3;
+  /*The animated layer*/
+  background-image:linear-gradient(#000,#000);
+  background-size:100% 100%;
+  background-position:right;
+  background-repeat:no-repeat;
+  transition:1s all;
+  font-weight: bold;
+  text-align: center;
+  font-size: 90px;
+  -webkit-text-stroke: 2px var(--main-front-color);
+  animation: stroke-rainbow 13s linear infinite,
+             text-rainbow 13s linear infinite;
+}
+
 .title-text {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: var(--txt-color);
+  left: 50%;
+  width: 1000px;
+  transform: translate(-50%, -50%);
   position: absolute;
   /*Color the text with background*/
   background-clip: text;
@@ -49,25 +73,6 @@
 
 .title-text:hover {
   background-size:0% 100%;
-}
-
-#westwood:hover{
-	
-}
-#mugler:hover{
-	
-}
-#mcqueen:hover{
-	
-}
-#gaultier:hover{
-	
-}
-#theyskens:hover{
-
-}
-#galliano:hover{
-	
 }
 
 @keyframes stroke-rainbow {
@@ -110,3 +115,20 @@
     background-color: var(--main-front-color);
   }
 }
+
+footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100px;
+  text-align: left;
+  background:black;
+}
+footer a {
+  border-bottom: 1px solid black;
+  color: rgb(216, 212, 212);
+  font: 24px/180px serif;
+  text-decoration: none;
+}
+
