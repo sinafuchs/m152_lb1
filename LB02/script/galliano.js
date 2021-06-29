@@ -9,17 +9,17 @@ let maxZIndex = titleLinks.length;
 titleLinks[0].classList.add("active");
 images[0].classList.add("active");
 
-titleLinks.forEach((navLink, activeIndex) => {
+titleLinks.forEach((titleLink, index) => {
     //set zIndex so the image appears in the foreground
-    colors[activeIndex].style.zIndex = `${titleLinks.length -
-        activeIndex}`;
-    navLink.addEventListener("click", () => {
+    colors[index].style.zIndex = `${titleLinks.length -
+        index}`;
+    titleLink.addEventListener("click", () => {
         // nav-link
         titleLinks.forEach(navLink => navLink.classList.remove("active"));
-        navLink.classList.add("active");
+        titleLink.classList.add("active");
         // select current active image
-        let currentSlide = document.querySelector(".carousel .slides img.active");
-        let slideFadeOut = currentSlide.animate([
+        let currSlide = document.querySelector(".carousel .slides img.active");
+        let imageFade = currSlide.animate([
             //repositions image horizontally
             { transform: "translateX(0)", opacity: 1 },
             //moves element 5% to to right
@@ -31,9 +31,9 @@ titleLinks.forEach((navLink, activeIndex) => {
             fill: "forwards"
         });
         //when animation finished
-        slideFadeOut.onfinish = () => {
-            currentSlide.classList.remove("active");
-            let activeSlide = images[activeIndex];
+        imageFade.onfinish = () => {
+            currSlide.classList.remove("active");
+            let activeSlide = images[index];
             activeSlide.classList.add("active");
             activeSlide.animate([
                 {
@@ -48,7 +48,7 @@ titleLinks.forEach((navLink, activeIndex) => {
         };
         maxZIndex += 1;
         //active color
-        let activeOverlay = colors[activeIndex];
+        let activeOverlay = colors[index];
         activeOverlay.style.zIndex = `${maxZIndex}`;
         //fill color in from left to right
         activeOverlay.animate([{ transform: "scaleX(0)" }, { transform: "scaleX(1)" }], { duration: 1200, fill: "forwards", easing: easeInOutQuart });
